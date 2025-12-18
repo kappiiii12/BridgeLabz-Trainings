@@ -8,6 +8,6 @@ public class TotalPrice {
         int quantity = sc.nextInt();
         int TotalPrice = price*quantity;
         System.out.println("Total price is "+TotalPrice + " if the unit price is "+price+" and quantity is "+quantity);
-        sc.nextInt();
+        sc.close();
     }
 }
