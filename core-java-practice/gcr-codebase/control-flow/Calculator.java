@@ -4,11 +4,11 @@ public class Calculator {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // Declare variables
+        
         double first, second;
         String op;
 
-        // Get input values
+        
         System.out.print("Enter first number: ");
         first = sc.nextDouble();
 
@@ -18,7 +18,7 @@ public class Calculator {
         System.out.print("Enter operator (+, -, *, /): ");
         op = sc.next();
 
-        // Perform calculation using switch-case
+        
         switch (op) {
             case "+":
                 System.out.println("Result = " + (first + second));
