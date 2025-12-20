@@ -26,7 +26,6 @@ public class NumberCheck {
             }
         }
 
-        // Compare first and last elements
         if (numbers[0] == numbers[numbers.length - 1]) {
             System.out.println("First and last elements are equal");
         } else if (numbers[0] > numbers[numbers.length - 1]) {
