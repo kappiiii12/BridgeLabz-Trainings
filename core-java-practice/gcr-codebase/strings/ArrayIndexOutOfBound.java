@@ -27,7 +27,7 @@ public class ArrayIndexOutOfBound {
             names[i] = sc.next();
         }
 
-        // generateException(names);
+      
         handleException(names);
         sc.close();
     }

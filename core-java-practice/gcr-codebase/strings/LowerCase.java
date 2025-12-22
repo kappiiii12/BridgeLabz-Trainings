@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class LowerCaseDemo {
+public class LowerCase {
 
     static String toLowerUsingCharAt(String text) {
         String result = "";
