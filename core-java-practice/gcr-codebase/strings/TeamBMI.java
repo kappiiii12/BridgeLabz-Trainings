@@ -15,6 +15,7 @@ public class TeamBMI {
 
         String[][] report = processBMIData(measurements);
         displayTable(report);
+        sc.close();
     }
 
     public static String[] getBMIAndStatus(double w, double hCm) {

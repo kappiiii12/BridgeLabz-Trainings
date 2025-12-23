@@ -31,6 +31,7 @@ public class RockPaperScissors {
         }
 
         displayStats(userWins, compWins, n);
+        sc.close();
     }
 
     public static int findWinner(int u, int c) {
