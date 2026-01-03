@@ -1,0 +1,56 @@
+import java.util.Random;
+
+public class EmployeeWage {
+
+    // Constants for Wage Calculation
+    public static final int WAGE_PER_HOUR = 20;
+    public static final int FULL_DAY_HOUR = 8;
+    public static final int PART_TIME_HOUR = 4; 
+    public static final int WORKING_DAYS_PER_MONTH = 20;
+    public static final int MAX_WORKING_HOURS = 100;
+
+    // Constants for Switch Case
+    public static final int IS_PART_TIME = 1;
+    public static final int IS_FULL_TIME = 2;
+
+    public static void main(String[] args) {
+        System.out.println("Welcome to Employee Wage Computation Program on Master Branch");
+
+        // Variables
+        int totalEmpHrs = 0;
+        int totalWorkingDays = 0;
+        int totalEmpWage = 0;
+
+        // Wages till a condition of total working hours or days is reached
+        while (totalEmpHrs <= MAX_WORKING_HOURS && totalWorkingDays < WORKING_DAYS_PER_MONTH) {
+            totalWorkingDays++;
+            int empHrs = 0;
+            
+            // Attendance using Random
+            Random random = new Random();
+            int empCheck = random.nextInt(3); // 0, 1, or 2
+
+            //  using Switch Case Statement
+            switch (empCheck) {
+                case IS_PART_TIME:
+                    empHrs = PART_TIME_HOUR;
+                    break;
+                case IS_FULL_TIME:
+                    empHrs = FULL_DAY_HOUR;
+                    break;
+                default:
+                    empHrs = 0;
+            }
+
+            totalEmpHrs += empHrs;
+            int dailyWage = empHrs * WAGE_PER_HOUR;
+            System.out.println("Day " + totalWorkingDays + " Hours: " + empHrs + " | Daily Wage: " + dailyWage);
+        }
+
+        totalEmpWage = totalEmpHrs * WAGE_PER_HOUR;
+      
+        System.out.println("Total Working Days: " + totalWorkingDays);
+        System.out.println("Total Working Hours: " + totalEmpHrs);
+        System.out.println("Total Employee Wage for the Month: " + totalEmpWage);
+    }
+}
