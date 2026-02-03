@@ -1,0 +1,22 @@
+package StreamBuzz;
+
+import java.util.*;
+
+public class CreatorStats {
+         private String creatorName ;
+         private double[] weeklyLikes ;
+		 public String getCreatorName() {
+			 return creatorName;
+		 }
+		 public void setCreatorName(String creatorName) {
+			 this.creatorName = creatorName;
+		 }
+		 public double[] getWeeklyLikes() {
+			 return weeklyLikes;
+		 }
+		 public void setWeeklyLikes(double[] weeklyLikes) {
+			 this.weeklyLikes = weeklyLikes;
+		 }
+         
+		 public static List<CreatorStats> engagementBoard = new ArrayList<>();
+      }
