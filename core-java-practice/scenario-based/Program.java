@@ -3,9 +3,9 @@
 import java.util.Scanner;
 
 public class Program {
-	public StringBuilder CleanseAndInvert(String input) {
+	public String CleanseAndInvert(String input) {
 		if(input.equals(null) || input.length() < 6 || !input.matches("^[a-zA-Z]+$"))
-			return null;
+			return "Invalid Input";
 		String temp1 = input.toLowerCase();
 		StringBuilder temp2 = new StringBuilder();
 		for(int i=0;i<temp1.length();i++) {
@@ -22,7 +22,7 @@ public class Program {
 			else
 				result.append(temp2.charAt(i));
 		}
-		return result;
+		return "The generated key is - "+ result;
 		
 	}
 	public static void main(String[] args) {
@@ -30,8 +30,8 @@ public class Program {
 		Program p = new Program();
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the word");
-		String input = sc.next();
-		System.out.print(p.CleanseAndInvert("The generated key is - "+input));
+		String input = sc.nextLine();
+		System.out.print(p.CleanseAndInvert(input));
 	}
 
 }
